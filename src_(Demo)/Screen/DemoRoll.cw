@@ -2,6 +2,8 @@ package  {
 
 	import GZ.Gfx.Object;
 
+	import GZ.Sys.Interface.Context;
+	import GZ.Gpu.ShaderModel.AtModel.Attribute_Quad;
 	import GZ.File.RcImg;
 	import GZ.Gfx.Root;
 
@@ -88,6 +90,23 @@ package  {
 		//	oImg = new Img(this, 400.0, 300.0, "RcEngine|Transform.png", true);
 		//	oImg = new Img(this, 400.0, 300.0, "Exe:/Transform.png", true);
 			oImg = new Img(this, 400.0, 300.0, "Exe|Rc/Tf.png", true);
+			
+			
+				//	var _oFont : RcFont = new RcFont( "c:/extra_fonts/ProggyClean.ttf");
+		//	var _oFont : RcFont = new RcFont( "Exe|Rc/Fonts/ProggyTiny.ttf", 10);
+		//	var _oFont : RcFont = new RcFont("c:/extra_fonts/DroidSans.ttf");
+		
+			Debug.fTrace("--------");
+			//oImg.oRc.fCpuLoad();
+			if(Context.oItf.bGpuDraw){
+				oImg.oRc.fSetGpuTexLayer(Attribute_Quad.oTexture);
+				oImg.oRc.fGpuLoad();
+			}
+			
+			
+			
+			
+			
 			
 			oImg.vPos.fSetSpeed(10);
 			oImg.vPos.fSetLimit(99900);
