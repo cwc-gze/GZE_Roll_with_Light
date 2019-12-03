@@ -21,7 +21,7 @@ package  {
 	
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel;
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Minimal;
-	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Quad;
+	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Quad.GzShModel_Quad;
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Raymarching;
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Shadertoy;
 	
