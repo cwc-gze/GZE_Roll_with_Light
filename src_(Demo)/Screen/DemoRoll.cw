@@ -38,14 +38,7 @@ package  {
 			//Debug.fTrace1("Static " + DemoRoll.sTest + " : " + DemoRoll.nInterger);
 			
 			
-			
-			<cpp>
-				gzEase<gzFloat> _nEase = 5.5f;
-				_nEase = 7.5;
-				_nEase = _nEase + 5.5f;
-			</cpp>
-			
-			
+	
  
 			//! ----------------------------------------------------------------------------
 			//! ------------ Object as attribute variable to do transformation -------------
@@ -145,9 +138,10 @@ package  {
 			
 		//	oImg.WnX(250);
 		//	oImg.WnY(250);
-	
+		
+		oImg.vRot.nPitch = oImg.vRot.nPitch + 0.005;
 
-	
+
 			/*
 			oImg.TnYaw(3.0 * Math.nPI);
 			oImg.EnYaw(150);
@@ -156,12 +150,17 @@ package  {
 			oImg.TnAlpha(1.0);
 			oImg.EnAlpha(100.0);
 			*/
+			*/
+			
+	
 
 		}
 
 		override public function fUpdateParentToChild():Void {
+
 			oImg.vRot.nPitch = oImg.vRot.nPitch + 0.005;
 			oImg.vRot.nRoll = oImg.vRot.nRoll + 0.008;
+
 			nTime++;
 			if(nTime > 250){
 				//oImg.vColor.nGreen.fTo(-1.0);
@@ -179,17 +178,7 @@ package  {
 			*/
 		}
 
-				
-		<cpp_class_h>
-		inline virtual void ViewAddInst() const{
-			printf("\nAdd Inst DemoRooll %d ", nSharedCount);
-		}
-		inline virtual void ViewSubInst() const {
-			printf("\nSubInst DemoRooll %d ", nSharedCount);
-		}
-		</cpp_class_h>
-		
-		
+
 		
 		
 		

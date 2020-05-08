@@ -470,7 +470,13 @@ var Sandbox = {
 
       var Module = {
 	//	filePackagePrefixURL: "<?php echo $Folder;?>", memoryInitializerPrefixURL: "<?php echo $Folder;?>", 
-        preRun: [],
+		//"dynamicLibraries": ['libsomething.js'],
+		//onRuntimeInitialized
+        onRuntimeInitialized: (function() {
+				//dynamicLibraries = ['libsomething.js'];
+				//alert("onRuntimeInitialized");
+		})(),
+			 
         postRun: [],
         print: (function() {
 		
