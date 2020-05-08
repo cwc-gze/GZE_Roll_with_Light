@@ -35,72 +35,17 @@ package  {
 		public function DemoRoll( _oParent : Root ):Void {
 			Clip(_oParent, 0.0, 0.0);
 			
-			//Debug.fTrace1("Static " + DemoRoll.sTest + " : " + DemoRoll.nInterger);
-			
-			
-	
- 
-			//! ----------------------------------------------------------------------------
-			//! ------------ Object as attribute variable to do transformation -------------
-			//! ----------------------------------------------------------------------------
-			//! -------- Pos -- In Screen Coordinate (0.0, 0.0, 0.0 = Top left)
-			//!nX = Position X
-			//!nY = Position Y
-			//!nZ = Position X
-			//! --------Size ------ (1.0 = Normal, 0.5 Half, 2.0 Double)
-			//!nWidth  = Width
-			//!nHeight = Height
-			//!nLength = Length
-			//! -----Rotation ----- (0.0 = Normal, PI/2.0 = 90deg,  PI = 180deg ) *All in radian
-			//!nRoll  = Rot X
-			//!nPitch = Rot Y
-			//!nYaw   = Rot Z
-			//! -----Brightness --- (0.0 = Normal, -1.0 = Dark, 1.0 = Bright)
-			//!nRed =   Red%
-			//!nBlue =  Blue%
-			//!nGreen = Green%
-			//! -----Alpha -------- (0.0 = Transparent, 1.0 = Normal)
-			//!nAlpha = Alpha%
-			//!
-			//! ----------------------------------------------------------------------------
-			//! -------------------------- Function Modifier  ------------------------------
-			//! ----------------------------------------------------------------------------
-			//!	Add one of these modifier to change how the attributes react, in a fonction call
-			//!
-			//! W = Wrap -> Wrap/Teleport to a specific position/value
-			//! T = To -> Move to a specifique destination -- NOTE: without Limit or Ease this will teleport to destination (infinite speed) ---
-			//! M = Move -> Move continuously with speed (+=)
-			//! L = Limit -> Set maximum speed (use with To or Move)
-			//! E = Ease -> Set gradually decreasing speed value (or gradually increasing speed when value are negative)
-			//! G = Get -> Getter on attibute (To get is value)
-			//!
-			//!----------------------------------------------------------------------------
-			//!Create an image
-			
-			
-			
-			//oImg = new Img(this, 400.0, 300.0, "C:/Transform.png", true);
-		//	oImg = new Img(this, 400.0, 300.0, "RcEngine|Transform.png", true);
-		//	oImg = new Img(this, 400.0, 300.0, "Exe:/Transform.png", true);
-			oImg = new Img(this, 400.0, 300.0, "Exe|Rc/Tf.png", true);
-			
-			
-				//	var _oFont : RcFont = new RcFont( "c:/extra_fonts/ProggyClean.ttf");
-		//	var _oFont : RcFont = new RcFont( "Exe|Rc/Fonts/ProggyTiny.ttf", 10);
-		//	var _oFont : RcFont = new RcFont("c:/extra_fonts/DroidSans.ttf");
 		
+			oImg = new Img(this, 400.0, 300.0, "Exe|Rc/Tf.png", true);
+
+			
 			Debug.fTrace("--------");
 			//oImg.oRc.fCpuLoad();
 			if(Context.oItf.bGpuDraw){
 				oImg.oRc.fSetGpuTexLayer(Attribute_Quad.oTexture);
 				oImg.oRc.fGpuLoad();
 			}
-			
-			
-			
-			
-			
-			
+
 			oImg.vPos.fSetSpeed(10);
 			oImg.vPos.fSetLimit(99900);
 			
@@ -133,25 +78,6 @@ package  {
 			oImg.vColor.nAlpha.fTo(1.0);
 			oImg.vColor.fSetSpeed(5);
 			oImg.vColor.fSetLimit(99900);
-			//oImg.vRot.nRoll = 10;
-			//oImg.vRot.nYaw = 2.5;
-			
-		//	oImg.WnX(250);
-		//	oImg.WnY(250);
-		
-		oImg.vRot.nPitch = oImg.vRot.nPitch + 0.005;
-
-
-			/*
-			oImg.TnYaw(3.0 * Math.nPI);
-			oImg.EnYaw(150);
-
-			oImg.WnAlpha(0.0);
-			oImg.TnAlpha(1.0);
-			oImg.EnAlpha(100.0);
-			*/
-			*/
-			
 	
 
 		}

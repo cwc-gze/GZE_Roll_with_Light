@@ -76,7 +76,7 @@ package  {
 			Debug.fTrace("!!!!!!!!!!!!!MainInterface!!!!");
 			
 			bGpuDraw = false;
-			//bGpuDraw = true;
+			bGpuDraw = true;
 			
 			
 			//!Make window transparent (Render or CPU)
@@ -99,6 +99,10 @@ package  {
 			oGzShModel = new GzShModel_Quad();
 			//oGzShModel = new GzShModel_Minimal();
 			//oGzShModel = new GzShModel_Shadertoy();
+			
+			Debug.fPass("fSetDestination");
+			oGzShModel.oGpuBatch.fSetDestination(oGpuObj);
+			
 			return true;
 		}
 		
