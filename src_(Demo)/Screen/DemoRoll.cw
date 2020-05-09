@@ -13,13 +13,17 @@ package  {
 	import GZ.Base.Math.Math;
 	import GZ.Gfx.Clip.Img;
 	
+	import Demo.Screen.LigthObj;
+	
 	import Demo.TestResult;
 
 	/**
 	 * @author Maeiky
 	 */
 	public class DemoRoll extends Clip {
+	
 
+		public var oLigthObj : LigthObj;
 		
 		
 		public static var nInterger : Int;
@@ -61,6 +65,7 @@ package  {
 			
 			oImg.vSize.nWidth = 0.5;
 			oImg.vSize.nHeight = 0.5;
+
 			//oImg.vSize = 0.5;
 			
 			
@@ -78,8 +83,11 @@ package  {
 			oImg.vColor.nAlpha.fTo(1.0);
 			oImg.vColor.fSetSpeed(5);
 			oImg.vColor.fSetLimit(99900);
+			
+			
 	
-
+			oLigthObj = new LigthObj();
+			
 		}
 
 		override public function fUpdateParentToChild():Void {
