@@ -84,7 +84,8 @@ package  {
 			_bTranparent = false;
 			
 			//Create a new windows
-			Interface(_oThreadItf, "GroundZero", 800, 600, _bTranparent, 0xFFFFFFFF);
+			//Interface(_oThreadItf, "GroundZero", 800, 600, _bTranparent, 0xFFFFFFFF);
+			Interface(_oThreadItf, "GroundZero", 800, 600, _bTranparent, 0x11111111);
 			//, eWinBorder.Normal, true, true, true, _bCpuGraphique);
 		
 			
