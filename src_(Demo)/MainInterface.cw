@@ -17,7 +17,7 @@ package  {
 	
 	import Demo.Screen.DemoRoll;
 	//import Demo.Screen.FpsCount;
-	import Demo.Screen.DemoText;
+
 	
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel;
 	import GZ.Gpu.ShaderModel.GzModel.GzShModel_Minimal;

@@ -71,8 +71,8 @@ package  {
 			//oImg.vSize = 0.5;
 			
 			
-			oImg.vSize.nWidth.fTo(1000000.5);
-			oImg.vSize.nHeight.fTo(1000000.5);
+			oImg.vSize.nWidth.fTo(1.5);
+			oImg.vSize.nHeight.fTo(1.5);
 			oImg.vSize.fSetSpeed(15);
 			oImg.vSize.fSetLimit(99900);
 			

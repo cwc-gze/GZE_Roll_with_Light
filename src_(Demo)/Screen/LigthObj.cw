@@ -16,24 +16,18 @@ package  {
 		//public var nIndex : UInt;
 			
 		public function LigthObj():Void {
-			Clip(parent, 400 , 300);
+			Clip(parent, 0 , 0);
 		
 			
 			
-			oLight  = new Light(0, 0, -100);
-			oLight.oBoxColor.vColor.nGreen = 1.000;
-			oLight.oBoxColor.vColor.nBlue = 1.000;
+			oLight  = new Light(400, 300, -500);
 			oLight.oBoxColor.vColor.nRed = 1.000;
-			oLight.oBoxColor.vColor.nAlpha = 10.000;
-			
-			oLight.oBoxSpecular.vColor.nAlpha = 10;
-			oLight.oBoxSpecular.vColor.nGreen = 1.0;
-			oLight.oBoxSpecular.vColor.nBlue = 0.5;
-			oLight.oBoxSpecular.vColor.nRed = 1.0;
+			oLight.oBoxColor.vColor.nAlpha = 60.000;
+			oLight.oBoxSpecular.vColor.nAlpha = 60.000;
 			
 			
 			//Debug.fTrace("NewLight : " + nIndex);
-		//	GzShCommun_Light.fSetDiffuseTranslucidity(-1.0);
+			GzShCommun_Light.fSetDiffuseTranslucidity(-1.0);
 		}
 		
 
